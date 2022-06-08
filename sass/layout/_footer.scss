@@ -1,0 +1,35 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    font-size: 1.5rem;
+	background-color: #3f3f3f;
+    @include desktop-media {
+        flex-direction: initial;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .footer__logo {
+        font-family: 'Shrikhand', cursive;
+        color: white;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+    }
+    .footer__info {
+        color: white;
+        margin-bottom: 0.5rem;
+        margin-right: 2rem;
+    }
+    a {
+        color: white;
+        margin-bottom: 0.5rem;
+        margin-right: 2rem;
+    }
+    i {
+        font-size: 1.2rem;
+        padding-right: 1rem;
+    }
+}

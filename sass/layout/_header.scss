@@ -1,0 +1,18 @@
+header {
+    height: 7rem;
+    @include flex-center;
+    @include bloc-shadow($colour-shadow);
+    position: relative;
+    padding-top: 1.5rem;
+    .logo img{
+        width: 18rem;
+        @include desktop-media {width: 30rem;}
+    }
+    .arrow {
+        position: absolute;
+        left: 2rem;
+        i {
+            font-size: 2rem;
+        }
+    }
+}

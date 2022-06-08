@@ -1,0 +1,16 @@
+.button {
+    @include bloc-shadow ($colour-shadow);
+    width: 200px;
+    padding: 1.5rem;
+    border-radius: 2.5rem;
+	background: linear-gradient(0.5turn,$colour-secondaire,$colour-primaire);
+    text-align: center;
+    a {
+        color: white;
+        font-size: 1.5rem;
+    }
+    &:hover {
+        box-shadow: 0rem 2rem 3rem $colour-shadow;
+        background: linear-gradient(0.5turn,lighten($colour-secondaire,5%),lighten($colour-primaire,5%));
+    }
+}

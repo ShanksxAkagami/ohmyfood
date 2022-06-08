@@ -1,0 +1,126 @@
+/* general */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.bloc-title {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    flex-basis: 100%;
+    @include desktop-media {
+        text-align: center;
+    }
+}
+
+/* animations */
+
+.animation-heart {
+    i {
+        font-size:30px;
+        -webkit-text-stroke-width: 3px;
+        -webkit-text-stroke-color:black;
+        color: transparent;
+        &:hover{
+            animation:heart 400ms linear both; 
+            background: linear-gradient(0.5turn,$colour-secondaire,$colour-primaire);
+            -webkit-background-clip: text;
+            -webkit-text-stroke-width:0;
+        }
+    }
+}
+
+.loader{
+	width: 100%;
+    background-color: white;
+	position:absolute;
+	z-index: -1;
+	animation: loader 3s linear;
+	display: flex;
+	justify-content: center;
+	.load{
+			position:fixed;
+			top: 42%;
+			bottom:42%;
+			width: 100px;
+			height: 100px;
+			border: 10px solid $colour-secondaire;
+			border-radius: 50%;
+			animation: load 1s linear;
+			animation-iteration-count: 3;
+			opacity: 0;
+	}
+}
+
+/* animations keyframes */
+
+@keyframes heart {
+    from {
+        opacity: 0;
+        transform: scale(1.3);
+    }
+    to { 	
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes Rotation {
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
+
+@keyframes appearance {
+	from {
+        opacity:0;
+	    margin-top: 4rem;
+    }
+	to {
+        opacity:1;
+    }
+}
+
+@keyframes loader {
+	from {
+		height: 1000%;
+		z-index: 10;
+	}
+	to {
+		height: 1000%;
+		z-index: 10;
+    }
+}
+
+@keyframes load {
+	0%{
+		transform: scale(1);
+		opacity: 1;}
+	50%{
+		transform: scale(1.3);
+		
+	}
+	100%{
+		transform: scale(1);
+		
+	}
+}

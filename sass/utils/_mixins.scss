@@ -1,0 +1,28 @@
+@mixin bloc-shadow($colour) {
+    box-shadow: 0px 4px 7px $colour;
+}
+
+@mixin flex-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-center-space {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin desktop-media {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+
+@mixin mobile-small-media {
+    @media screen and (max-width: map-get($breakpoints, mobile-small)){
+        @content;
+    }
+}

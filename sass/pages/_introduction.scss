@@ -1,0 +1,125 @@
+.introduction {
+    width: 100%;
+    background-color: $colour-bloc;
+    &__localisation {
+        background-color: darken($colour-bloc, 10%);
+        @include flex-center;
+        height: 6rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        i {
+            padding-right: 1.5rem;
+        }
+    }
+    &__presentation {
+        @include flex-center;
+        flex-direction: column;
+        padding-top: 1.5rem;
+        padding-bottom: 5rem;
+        text-align: center;
+        &__informations {
+            color: $colour-gray;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        .bloc-title {margin-bottom: 0;}
+    }
+}
+
+.fonctionnement {
+    @include flex-center;
+    flex-direction: column;
+    padding: 1.5rem;
+    padding-left: 2.3rem;
+    margin-bottom: 4rem;
+    &__step {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        max-width: 500px;
+        background-color: $colour-bloc;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+        border-radius: 2rem;
+        @include bloc-shadow($colour-shadow);
+        height: 8rem;
+        font-weight: bold;
+        font-size: 1.5rem;
+        .step__nbr {
+            padding-right: 1rem;
+            padding-left: 1rem;
+            padding-top: 0.6rem;
+            padding-bottom: 0.6rem;
+            background-color: $colour-primaire;
+            border-radius: 3rem;
+            margin-left: -1.5rem;
+            color: white;
+        }
+        i {
+            color: $colour-gray;
+            padding: 1.8rem;
+            font-size: 2rem;
+        }
+        &:hover {
+            background-color: lighten($colour-primaire, 35%);
+            i {color: $colour-primaire;}
+        }
+    }
+}
+
+.restaurant {
+    background-color: $colour-bloc;
+    @include flex-center;
+    flex-direction: column;
+    padding: 2.3rem;
+    padding-bottom: 5rem;
+    a {@include flex-center;}
+    &__figure {
+        border-radius: 2rem;
+        @include bloc-shadow($colour-shadow);
+        width: 100%;
+        height: 30rem;
+        position: relative;
+        margin: 0;
+        margin-top: 1.3rem;
+        margin-bottom: 0.7rem;
+        @include desktop-media {
+            max-width: 500px;
+            margin-bottom: 2rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        border-radius: 2rem 2rem 0 0;
+    }
+    &__new {
+        width: 8rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        padding: 1rem;
+        background-color: $colour-tertiaire;
+        color: darken($colour-tertiaire, 40%);
+		position: absolute;
+		top: 0;
+		right: 1rem;
+        border-radius: 0.25rem;
+    }
+    &__legend {
+        width: 100%;
+        @include flex-center-space;
+        padding: 1rem;
+        line-height: 1rem;
+        i {
+            padding-right: 2rem;
+        }
+    }
+    &__name {
+        font-weight: bold;
+        font-size: 1.8rem;
+    }
+    &__localisation {
+        font-size: 1.8rem;
+    }
+}
